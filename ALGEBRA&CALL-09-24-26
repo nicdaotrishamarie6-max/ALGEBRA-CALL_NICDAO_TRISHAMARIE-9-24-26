@@ -1,0 +1,44 @@
+#----- MAIN PROGRAM -----
+    def main():
+        print("ALGEBRA & CALCULUS 1")
+        print("FIND THE VALUE OF (X) = FORMULA:
+              f(x)=(ax^+bx+c) ")
+    while true:
+        print("\n1. Solve a linear eqauation(ax + b=c) ")
+        print("2. solve a quadratic eqauation (ax^2 + bx +c = 0) ")
+        print("3. evaluate f(x)"= ax^ 2+ bx + c ")
+        print("4. estimate a limit as x approaches a value")
+        print("6. compute a definite integral of f(x) ")
+        print("7. quit")
+        choice= input("choose an option: ").strip()
+  if choice == "1":
+     a,b,c = get_float("a: "), get_float("b: "), get_float("c: ")
+        print(solve_linear(a,b,c))
+
+elif choice == "2":
+     a,b,c = get_float("a: "), get_float("b: "), get_float("c: ")
+    print(solve_quadratic(a,b,c))
+elif choice == "3"
+    a,b,c = get_float("a: "), get_float("b: "), get_float("c: ") x = get_float("x: ")
+    print(f"f({x}) = {f(a, b, c)} ")
+elif choice == "4":
+    a,b,c = get_float("a: "), get_float("b; "), get_float("c: ")x = get_float("x: ")
+    exact = deritative_exact(a,b,x)
+    numeric = deritative_numeric(a,b,c,x)
+    print(f"exact f' ({x}) = {exactr} ")
+    print( f" numeric f' ({x}) = {numeric:.6f} (via central difference) ")
+
+    elif choice =="5":
+    a,b,c = get_float("a: "), get_float("b: "), get_float("c:")
+    x1 = get_float("lower bound x1: ")
+    x2 = get_float("upper bound x2: ")
+    exact = integral_trapezoid("a,b,c,x1,x2")
+    print(f"exact integral={exact: 6f} ")
+    print(f" numeric integral = {numeric:.6f}" (via trapezoid rule, n = 1000) ")
+elif choice == "7":
+    print("goodbye!")
+    break
+else: 
+    print("invalid choice: please choose 1-7. ")
+if_name=="_main_"
+    main() 
